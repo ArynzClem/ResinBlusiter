@@ -21,3 +21,20 @@ python3 RB.py
 8. SYN Flood
 9. FTP Flood
 10. SCTP Flood
+
+
+#Note
+if there is error server.bind(("0.0.0.0", 1337)) OSError: [Errno 98} address aleredy use
+
+indicates that the port you are trying to use (port 1337) is already in use by another process
+
+Stop Process Using Port 1337:
+
+You can try to find processes using port 1337 and stop them. On Linux or macOS, you can use the following command to find processes using port 1337:
+css
+Copy code
+sudo lsof -i :1337
+Then, you can terminate the process by using its process ID:
+bash
+Copy code
+kill -9 <PID>
